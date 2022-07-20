@@ -21,7 +21,7 @@ export default function Header() {
         <Navbar className="mx-auto max-w-screen-xl shadow-md shadow-green-400 hidden md:block">
             <div className="container flex items-center justify-between text-blue-grey-900 ">
                 <Image
-                    src="/../public/logo_rahbarindia.png"
+                    src="https://github.com/ankitjha-webdev/rahbarindia.com/blob/'main'/client/public/logo_rahbarindia.png"
                     alt="Landscape picture"
                     width={200}
                     height={40}
