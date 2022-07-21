@@ -20,13 +20,17 @@ export default function Header() {
     return (
         <Navbar className="mx-auto max-w-screen-xl shadow-md shadow-green-400 hidden md:block">
             <div className="container flex items-center justify-between text-blue-grey-900 ">
+                <Link href="/">
+                <a>
                 <Image
-                    src="/../public/logo_rahbarindia.png"
-                    alt="Landscape picture"
+                    src="/logo_rahbarindia.png"
+                    alt="Rahbar India"
                     width={200}
                     height={40}
                     className="cursor-pointer font-normal"
                 />
+                </a>
+                </Link>
                 <ul className="flex items-center gap-6">
                     <Typography as="li" variant="small" className="active md:p-1 font-semibold cursor-pointer">
 
