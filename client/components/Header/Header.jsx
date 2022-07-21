@@ -23,13 +23,8 @@ export default function Header() {
                 <Link href="/">
                 <a>
                 <Image
-<<<<<<< HEAD
                     src="/logo_rahbarindia.png"
                     alt="Rahbar India"
-=======
-                    src="https://github.com/ankitjha-webdev/rahbarindia.com/blob/'main'/client/public/logo_rahbarindia.png"
-                    alt="Landscape picture"
->>>>>>> a5fc7f0069ecf569764a0d5f4c470f198463813f
                     width={200}
                     height={40}
                     className="cursor-pointer font-normal"
