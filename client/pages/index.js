@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import styles from '../styles/Home.module.css'
+import HomePage from './Home/HomePage'
 
 export default function Home() {
   return (
@@ -12,9 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Header/>
+      <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <HomePage/>
+        {/* <h1 className={styles.title}>
           Welcome to Rahbar India
         </h1>
         <p className={styles.description}>
@@ -22,46 +25,22 @@ export default function Home() {
         </p>
         <div className={styles.grid}>
           <div className={styles.gridItem}>
-            {/* <Image
-              src="/images/tour.jpg"
-              alt="Tour"
-              width={400}
-              height={400}
-              layout="fill"
-            /> */}
+      
             <h3>Tours</h3>
             <p>
               We can help you plan your next adventure. We can even help you plan your next adventure. We are here to make your trip a fun and adventure filled one.
             </p>
           </div>
           <div className={styles.gridItem}>
-            {/* <Image
-              src="/images/hotel.jpg"
-              alt="Hotel"
-              width={400}
-              height={400}
-              layout="fill"
-            /> */}
+          
             <h3>Hotels</h3>
             <p>
               We can help you plan your next adventure. We can even help you plan your next adventure. We are here to make your trip a fun and adventure filled one.
             </p>
           </div>
-          </div>
+        </div> */}
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/ankitjha-webdev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Develped by Ankit Kumar{' '}
-          <span className="items-center justify-center mx-2">
-            <Image src="/logo_rahbarindia.png" alt="Rahbar India Logo" width="200" height="34px"  />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -161,50 +161,50 @@ export default function Header() {
                 )
             }
             <Fragment>
-              <div className="w-52">
-              <Dialog open={open} handler={handleOpen} size="lg:xs md:lg "  className='shadow-sm shadow-green-700 rounded-lg'>
-                    <DialogHeader className='justify-center items-center text-green-500 '>Login to Enter     </DialogHeader>
-                    <DialogBody divider className='flex flex-col m-0'>
-                        <div className='bg-grey-50 px-8 mx-auto mb-5 shadow-lg shadow-green-700 rounded-lg py-8'>
-                            {/* Logo */}
-                            <div className=''>
-                                <Image src="/logo_rahbarindia.png" width={300} height={50} />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <div className='my-2 w-full items-center justify-center'>
-                                    <Input type="text" label="Username" color='grey' className="w-full" />
+             
+                    <Dialog open={open} handler={handleOpen} size="lg:xs md:lg " className='shadow-sm shadow-green-700 rounded-lg'>
+                        <DialogHeader className='justify-center items-center text-green-500 '>Login to Enter     </DialogHeader>
+                        <DialogBody divider className='flex flex-col m-0'>
+                            <div className='bg-grey-50 px-8 mx-auto mb-5 shadow-lg shadow-green-700 rounded-lg py-8'>
+                                {/* Logo */}
+                                <div className=''>
+                                    <Image src="/logo_rahbarindia.png" width={150} height={40} className="mx-auto" />
                                 </div>
-                                <div className="my-2 w-full text-center items-center justify-center">
-                                    <Input type="text" label="Email" color='grey' className="w-full" />
+                                <div className="flex flex-col items-center justify-center">
+                                    <div className='my-2 w-full items-center justify-center'>
+                                        <Input type="text" label="Username" color='grey' className="w-full" />
+                                    </div>
+                                    <div className="my-2 w-full text-center items-center justify-center">
+                                        <Input type="text" label="Email" color='grey' className="w-full" />
+                                    </div>
+                                    <div className="my-2 w-full text-center items-center justify-center">
+                                        <Input type="text" label="Password" color='grey' className="w-full" />
+                                    </div>
                                 </div>
-                                <div className="my-2 w-full text-center items-center justify-center">
-                                    <Input type="text" label="Password" color='grey' className="w-full" />
+                                <div className='flex flex-row  justify-center items-center mt-8 space-x-10'>
+                                    <Button
+                                        variant="text"
+                                        color="red"
+                                        onClick={handleOpen}
+                                        className="mr-1 bg-green-50 text-white"
+                                    >
+                                        <span>Cancel</span>
+                                    </Button>
+                                    <Button variant="gradient" color="green" onClick={handleOpen}>
+                                        <span>Login</span>
+                                    </Button>
+                                </div>
+                                <div className="grid  items-center justify-center pt-2">
+                                    <small className='flex mt-2'>Don't have Account?
+                                        <Link href="/register"><a className="flex flex-row items-center hover:text-green-600 mx-2 ">Register&nbsp;</a></Link>
+                                    </small>
                                 </div>
                             </div>
-                            <div className='flex flex-row  justify-center items-center mt-8 space-x-10'>
-                                <Button
-                                    variant="text"
-                                    color="red"
-                                    onClick={handleOpen}
-                                    className="mr-1 bg-green-50 text-white"
-                                >
-                                    <span>Cancel</span>
-                                </Button>
-                                <Button variant="gradient" color="green" onClick={handleOpen}>
-                                    <span>Login</span>
-                                </Button>
-                            </div>
-                            <div className="flex flex-col items-end justify-end pt-2">
-                            <small>Don't have Account?
-                            <Link href="/register"><a className="flex flex-row items-center hover:text-green-600">Register&nbsp;</a></Link>
-                            </small>
-                            </div>
-                        </div>
 
-                    </DialogBody>
+                        </DialogBody>
 
-                </Dialog>
-              </div>
+                    </Dialog>
+           
             </Fragment>
         </>
 
