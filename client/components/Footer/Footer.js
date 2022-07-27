@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const Footer = () => {
     return (
-        <div className="">
-            <footer className="mx-auto w-52 justify-center items-center">
+
+        <footer className="mx-auto w-52 justify-center items-center">
             <Tooltip content="Click to know about the developer">
                 <a
                     href="https://ankitkumar.tech"
@@ -17,9 +17,9 @@ const Footer = () => {
                         <Image src="/logo_rahbarindia.png" alt="Rahbar India Logo" width="200" height="34px" />
                     </span>
                 </a>
-                </Tooltip>
-            </footer>
-        </div>
+            </Tooltip>
+        </footer>
+
     )
 }
 
