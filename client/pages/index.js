@@ -7,7 +7,9 @@ import HomePage from './Home/HomePage'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
+    
+    <div>
       <Head>
         <title>Rahbar India a Travel Agency</title>
         <meta name="description" content="Developed by Ankit Kumar " />
@@ -42,5 +44,6 @@ export default function Home() {
       </main>
       <Footer />
     </div>
+    </>
   )
 }

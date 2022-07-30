@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { Navbar, Button, Typography, Avatar, Dialog, DialogHeader, DialogBody, DialogFooter, Input } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from 'next/link'
+
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -12,25 +13,10 @@ export default function Header() {
 
     const handleOpen = (value) => setOpen(!open);
 
-    const icon = (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 opacity-75"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-        >
-            <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-            />
-        </svg>
-    );
-
     return (
         <>
-            <Navbar className="mx-auto max-w-screen-2xl shadow-md shadow-green-400 hidden md:block">
-                <div className="container flex items-center justify-between text-blue-grey-900 ">
+            <Navbar className="mx-auto  shadow-md shadow-green-400 hidden md:block">
+                <div className=" flex items-center justify-between text-blue-grey-900 ">
                     <Link href="/">
                         <a>
                             <Image
@@ -65,39 +51,10 @@ export default function Header() {
 
 
                 </div>
-                {/*  Mobile menu */}
-                {/* <div className="md:hidden">
-                <div className="mobile-menu-overlay" x-show="showMenu">
-                    <div className="mobile-menu-overlay-content">
-                        <ul className="flex flex-col items-center">
-                            <Typography as="li" variant="small" className="active md:p-1 font-semibold cursor-pointer">
-                                <Link href="/"><a className="flex items-center hover:text-green-600" >Home&nbsp;</a></Link>
-                            </Typography>
-                            <Typography as="li" variant="small" className="md:p-1 font-normal cursor-pointer">
-                                <Link href="/service"><a className="flex items-center  hover:text-green-600">Service&nbsp;</a></Link>
-                            </Typography>
-                            <Typography as="li" variant="small" className="md:p-1 font-normal cursor-pointer">
-                                <Link href="/about"><a className="flex items-center hover:text-green-600">About&nbsp;</a></Link>
-                            </Typography>
-                            <Typography as="li" variant="small" className="md:p-1 font-normal cursor-pointer">
-                                <Link href="/contact"><a className="flex items-center hover:text-green-600">Contact&nbsp;</a></Link>
-                            </Typography>
-                        </ul>
-                    </div>
-                </div>
-            </div> */}
-                {/* <div className="md:hidden block  mobile-menu-link">
-				<ul className="">
-					<li className="active"><a href="index.html" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-					<li><a href="#services" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
-					<li><a href="#about" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
-					<li><a href="#contact" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
-				</ul>
-			</div> */}
-
+               
             </Navbar>
-            <Navbar className="mx-auto max-w-screen-xl shadow-md shadow-green-400 flex md:hidden">
-                <div className="container items-center justify-between text-blue-grey-900 ">
+            <Navbar className="mx-auto shadow-md shadow-green-400 flex md:hidden">
+                <div className=" items-center justify-between text-blue-grey-900 ">
                     <Link href="/">
                         <a>
                             <Image
@@ -114,7 +71,7 @@ export default function Header() {
             </Navbar>
             <div className=" md:hidden items-center absolute top-4 right-0 my-2">
                 <button className="outline-none" onClick={toggle}>
-                    <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                    <svg className=" w-6 h-6 mr-4 text-gray-500 hover:text-green-500 "
                         x-show="!showMenu"
                         fill="none"
                         strokeLinecap="round"
@@ -131,8 +88,8 @@ export default function Header() {
             {
                 isOpen && (
 
-                    <Navbar variant="gradient" blurred={false} shadow={false} className="mx-auto max-w-screen-xl mt-7 shadow-md shadow-green-400 flex md:hidden">
-                        <div className="container flex flex-col items-center justify-between text-blue-grey-900 ">
+                    <Navbar variant="gradient" blurred={false} shadow={false} className="mx-auto shadow-md shadow-green-400 flex md:hidden">
+                        <div className="mx-auto flex flex-col items-center justify-between text-blue-grey-900 ">
 
                             <ul className="flex items-center gap-6 flex-row my-2">
                                 <div className=" flex flex-col ">
@@ -150,9 +107,11 @@ export default function Header() {
                                     </Typography>
                                 </div>
                             </ul>
+                            <Link href="/login">
                             <Button variant="gradient" className="bg-green-600 w-full flex flex-col items-center justify-between" color="green" size="md">
-                                <Link href="/login"><a className="flex items-center">Log in&nbsp;</a></Link>
+                                <a className="flex items-center">Log in&nbsp;</a>
                             </Button>
+                            </Link>
                             {/* <!-- Mobile menu button --> */}
 
 
@@ -160,6 +119,7 @@ export default function Header() {
                     </Navbar>
                 )
             }
+            
             <Fragment>
              
                     <Dialog open={open} handler={handleOpen} size="lg:xs md:lg " className='shadow-sm shadow-green-700 rounded-lg'>
@@ -195,7 +155,7 @@ export default function Header() {
                                     </Button>
                                 </div>
                                 <div className="grid  items-center justify-center pt-2">
-                                    <small className='flex mt-2'>Don't have Account?
+                                    <small className='flex mt-2'> Don't have Account?
                                         <Link href="/register"><a className="flex flex-row items-center hover:text-green-600 mx-2 ">Register&nbsp;</a></Link>
                                     </small>
                                 </div>

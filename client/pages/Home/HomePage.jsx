@@ -36,13 +36,13 @@ const HomePage = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper container w-full -mt-10"
+            className="mySwiper w-full -mt-10"
           >
             <div
               slot="container-start"
               className="parallax-bg"
               style={{
-                "background-image":
+                "backgroundImage":
                   "url(/Dharbhanga.jpg)",
               }}
               data-swiper-parallax="-23%"
